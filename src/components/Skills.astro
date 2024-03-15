@@ -1,97 +1,90 @@
-<ul>
-    <li>
-      <a href="#">xxx</a>
-    </li>
-    
-    <li>
-      <a href="#">xxx</a>
-    </li>
-    
-    <li>
-        <a href="#">xxx</a>
-    </li>
-  </ul>
-
-
-
-  <div class="row"> 
-    <div class="column">
-      <img src="/public/profil.png" style="width:100%">
-      <img src="/public/profil.png" style="width:100%">
-    </div>
-
-    <div class="column">
-        <img src="/public/profil.png" style="width:100%">
-        <img src="/public/profil.png" style="width:100%">
-    </div>  
-
-    <div class="column">
-        <img src="/public/profil.png" style="width:100%">
-        <img src="/public/profil.png" style="width:100%">
-    </div>
-
+<article>
+<h1>Experience</h1>
+<section>
+<div class="box">
+    <h2>2023</h2>
+  <img src="/public/circle.jpg" alt="" width="5%">
+    <h3>Studentermedhjælper / Onsite Manager & Site Management</h3>
+    <h4>3 Business</h4>
+    <p>Som Onsite manager og Site Management, har jeg stået for xxxx</p> 
+</div>
+<div class="box">
+  <div class="år">
+    <h2>2022</h2>
+  <img src="/public/circle.jpg" alt="" width="5%">
   </div>
+  <div class="indhold">  
+    <h3>3D Animation</h3>
+    <br>
+    <h4>3D Boot Camp - CADA Truemax </h4>
+    <h4>3D Blender</h4>
+    <h4>Zbrush</h4>
+    <p>Tekst</p> 
+  </div>
+</div>
+</section>
+</article>
+
+
+<style>
+article{
+  color: white;
+}
+img{
+  display: none;
+}
+
+.box{
+  margin-top: 3em;
+}
+
+h2, h3, h4, p{
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+h2{
+  font-size: medium;
+}
+h3{
+  font-size: 30px;
+}
+h4{
+  font-size: 20px;
+}
+
+
+
+@media screen and (min-width: 999px){
+
+  article{
+    color: white;
+    padding: 1em 30em;
+
+  }
+
+  .box{
+    align-items: center;
+    display: grid;
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+    padding: 20px
+  }
+
+
+  img{
+    margin-left: 1.5em;
+  }
+
+  h1{
+    margin-bottom: 2em;
+  }
+
+  h3{
+    
+  }
+
   
-
-  <style>
-ul {
-  display: flex;
-  padding: 0;
-  list-style: none;
-  justify-content: center;
- 
-/*  metode 1  */
-/*   li:not(:last-child):after{
-    content: '/';
-    margin-inline: 1ch;
-  } */
-
-/*  metode 2 */
-    li + li::before{
-    content: '/' ;
-    margin-inline: 1ch;
-  }
 }
-
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-  justify-content: center;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-  </style>
+</style>

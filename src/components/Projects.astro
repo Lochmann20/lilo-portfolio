@@ -1,0 +1,113 @@
+<!-- Web -->
+
+
+<article>
+    <h2>Projects</h2>
+    <section>
+        <h1>Ashoka</h1>
+        <img src="/public/Ashoka2.png" alt="" >
+    </section>
+
+    <section class="VW">
+        <h1>Marilyn Monroe</h1>
+        <img src="/public/Ashoka2.png" alt="" >
+    </section>
+
+    <section>
+        <h1>Wonda</h1>
+        <img src="/public/Ashoka2.png" alt="">
+    </section>
+
+    <section class="Ani">
+        <h1>The Break</h1>
+        <img src="/public/TeCupCookie.png" alt="">
+    </section>
+
+    <section>
+        <h1>Red Vine</h1>
+        <img src="/public/RødvinOgDruer.png" alt="" >
+    </section>
+
+    <section class="Ani">
+        <h1>Coffee House</h1>
+        <img src="/public/coffee_house.png" alt="" >
+    </section>
+
+    <section>
+        <h1>CA</h1>
+        <img src="/public/CA.png" alt="" >
+    </section>
+
+    <section class="Ani">
+        <h1>VAHL WOOD</h1>
+        <img src="/public/vahlwood.png" alt="" >
+    </section>
+
+    <section>
+        <h1>VildMad</h1>
+        <img src="/public/vildmad.png" alt="" >
+    </section>
+</article>
+
+
+
+
+
+<style>
+
+article{
+    color: white;
+    margin-top: 5em;
+}
+
+section{
+    text-align: center;
+}
+
+img{
+    width:80%;
+
+}
+
+
+
+
+
+@media screen and (min-width: 999px){
+
+    article{
+        background-color: #252525;
+        color: white;
+        display: grid;
+        gap: 5em;
+        padding: 5em 1em;
+
+
+        & section{
+            display: flex;
+            border-bottom: 1px solid white;
+            width: 60%;
+            justify-content: space-between;
+            margin: auto;
+            align-items: end; 
+            padding: 10px 10px; 
+        }
+
+        .VW, .Ani{
+                flex-direction: row-reverse;
+            }
+
+
+        h2{
+            padding: 0em 15em ;
+        }
+    }
+
+    img{
+        width: 20%;
+        border-radius: 25px;
+    }
+
+    
+}
+</style>

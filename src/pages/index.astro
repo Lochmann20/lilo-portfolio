@@ -1,10 +1,13 @@
 ---
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
+import UnderHeroBanner from "../components/UnderHeroBanner.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Cv from "../components/Cv.astro";
 import Skills from "../components/Skills.astro";
-import SoMe from "../components/SoMe.astro";
-import CV from "../components/CV.astro";
+import Projects from "../components/Projects.astro";
+import Learn from "../components/Learn.astro";
+import LetsTalk from "../components/LetsTalk.astro";
 ---
 
 <html lang="en">
@@ -21,11 +24,20 @@ import CV from "../components/CV.astro";
 		<main>
 			<Nav />
 			<Hero />
-			<About />
+			<UnderHeroBanner />
+			<AboutMe />
+			<Cv />
 			<Skills />
-			<CV />
-			<SoMe />
+			<Projects />
+			<Learn />
+			<LetsTalk />
 		</main>
 		<footer></footer>
 	</body>
 </html>
+
+<style>
+	body{
+		background-color: black;
+	}
+</style>
