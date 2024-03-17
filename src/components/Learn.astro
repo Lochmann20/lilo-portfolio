@@ -8,7 +8,7 @@ import type { Code } from "astro:components";
         But I wnat to learn more about animtion and unity.
     </p>
 
-<section>
+<section id="section">
     <div>
         <img src="/png/unity-icon.png" alt="" style="border-radius: 25px;">
         <h1>Unity</h1>
@@ -39,36 +39,15 @@ article{
     filter: brightness(1);
 }
 
+#section{
+    display: grid;
 
-@media screen and (min-width: 999px){
-
-    article{
-        color: white;
-        text-align: center;
-        padding: 1em 35em;
-    }
-
-    p{
-        font-size: medium;
-    }
-}
-
-section{
-    display: flex;
-    justify-content: center;
-    gap: 3em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    
-    img{
-        width: 50%;
-    }
-
-    & div{
+& div{
         background-color: black;
         padding: 20px;
         position: relative;
         border-radius: 15px;
+        margin-bottom: 2em;
     }
     
     & div::after,
@@ -102,6 +81,33 @@ section{
     0% {--gradient-angle: 0deg;}
     100% {--gradient-angle: 360deg;}
     } 
+
+}
+
+
+@media screen and (min-width: 999px){
+
+    article{
+        color: white;
+        text-align: center;
+        padding: 1em 35em;
+    }
+
+    p{
+        font-size: medium;
+    }
+
+#section{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    
+    img{
+        width: 50%;
+    }
+}
 
 }
 </style>
