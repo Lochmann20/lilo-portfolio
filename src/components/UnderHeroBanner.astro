@@ -1,18 +1,35 @@
+
+
 <article>
-    <img src="/public/PNG/experience3.png" alt="">
-    <img src="/public/PNG/experience2.png" alt="">
-    <img src="/public/PNG/experience1.png" alt="">
+    <img id="first" src="/public/PNG/experience3.png" alt="">
+    <img id="second" src="/public/PNG/experience2.png" alt="">
+    <img id="last" src="/public/PNG/experience1.png" alt="">
 </article>
 
 <style>
-
+img:last-child{
+    width: 100%;
+}
 
     @media screen and (min-width: 999px){
         article{
             display: flex;
-            background: radial-gradient(circle at top left, #351c1c, #131313, #351c1c);
+            /* background: radial-gradient(circle at top left, #351c1c, #131313, #351c1c); */
+            background-color: black;
             justify-content: center;
-            gap: 5em;
+        }
+
+        #first{
+            width: 10%;
+            height: 10%;
+        }
+        #second{
+            width: 13%;
+            height: 5%;
+        }
+        #last{
+            width: 23%;
+            height: 10%;
         }
     }
 </style>

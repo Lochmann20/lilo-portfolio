@@ -1,38 +1,18 @@
----
 
----
 
 <div class="topnav" id="myTopnav" >
     <div>
-    <a href="#home" class="active">LILO</a>
+    <a href="#home" class="logo" >LILO</a>
     </div>
 
     <div class="a">
     <a href="index.html">Home</a>
-    <a href="About">About</a>
-    <a href="Skills">Skills</a>
-    <a href="Projects">Projects</a>
-    <a href="Contact">Lets Talk</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Lets Talk</a>
     </div>
-
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-  
 </div>
-
-
-
-<script>
-    function myFunction() {
-      let nav = document.getElementById("myTopnav");
-      if (nav.className === "topnav") {
-        nav.className += " responsive";
-      } else {
-        nav.className = "topnav";
-      }
-    }
-</script>
 
 
 <style>
@@ -43,10 +23,8 @@ body {
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: black;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -55,9 +33,9 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 7px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 /* .topnav a:hover {
@@ -75,15 +53,18 @@ body {
 
 
 @media screen and (min-width: 999px) {
-  /* .topnav{
-    border-bottom: 2px solid #351c1c;
-  } */
+
+  .topnav{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
 
   .topnav a {
     float: none;
-    display: block;
     text-align: left;
-    font-size: large;
+    font-size: large; 
   }
 
   .a{

@@ -9,10 +9,8 @@
     <p>Som Onsite manager og Site Management, har jeg stået for xxxx</p> 
 </div>
 <div class="box">
-  <div class="år">
     <h2>2022</h2>
   <img src="/public/circle.jpg" alt="" width="5%">
-  </div>
   <div class="indhold">  
     <h3>3D Animation</h3>
     <br>
@@ -29,13 +27,60 @@
 <style>
 article{
   color: white;
+  padding: 40px;
+  text-align: start;
+  
 }
 img{
   display: none;
 }
 
+
 .box{
-  margin-top: 3em;
+    display: flex;
+    margin-top: 2em;
+    flex-direction: column;
+    align-items: center;
+    height: 22vh;
+    position: relative;
+    border-radius: 15px;
+    background-color: black;
+    padding: 20px;
+}
+
+.box::after,
+.box::before{
+    content: '';
+    position: absolute;
+    inset: -.2rem;
+    z-index: -1;
+    background: conic-gradient(
+    from var(--gradient-angle), 
+    black,
+    purple, 
+    blue,
+    purple,
+    blue,
+    purple,
+    black);
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+    border-radius: 15px;
+}
+
+.box::after{
+    filter: blur(0rem);
+}
+
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation{
+    0% {--gradient-angle: 0deg;}
+    100% {--gradient-angle: 360deg;}
 }
 
 h2, h3, h4, p{
@@ -45,6 +90,7 @@ h2, h3, h4, p{
 
 h2{
   font-size: medium;
+  text-align: start;
 }
 h3{
   font-size: 30px;
@@ -58,18 +104,14 @@ h4{
 @media screen and (min-width: 999px){
 
   article{
-    background-color: #131313;
     color: white;
-    padding: 1em 30em;
+    padding: 3em 33em;
 
   }
 
   .box{
     align-items: center;
     display: grid;
-    border-style: solid;
-    border-width: thin;
-    border-color: white;
     padding: 20px
   }
 

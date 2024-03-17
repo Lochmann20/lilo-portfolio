@@ -1,67 +1,104 @@
+<!-- ---
+import "../stars.css";
+---
+
+<div id="stars"></div> -->
+
 <article>
     <h1>What you will get</h1>
     <p></p>
 
     <div>
-        <div class="boxes" >
+        <div class="boxes">
             <img src="/public/VSC.png" alt="">
             <h2>Visuel Studio Code</h2>
-            <p>HTML, CSS, Javascript, Nexportparts.js</p>
+            <p>HTML, CSS, Javascript, NEXT.js</p>
         </div>
 
-        <div class="boxes" id="boxesColor">
+        <div class="boxes" >
             <img src="/public/blender.png" alt="">
             <h2>Animation</h2>
-            <p>3D Blender, Zbrush</p>
+            <p>3D Blender, Zbrush & Clip Studio Paint</p>
         </div>
 
-        <div class="boxes" id="boxesColor">
+        <div class="boxes" >
             <img src="/public/photoshop.png" alt="">
-            <h2>Adobe</h2>
+            <h2>UI / UX</h2>
             <p>Photoshop, Illustrator, Indesign</p>
         </div>
-
-        <div class="boxes">
-            <img src="/public/photoshop.png" alt="">
-            <h2>UI/UX</h2>
-            <p></p>
-        </div>
-
-
     </div>
 </article>
 
 <style>
+
 article{
-    background: radial-gradient(circle at bottom left, #351c1c, #131313, #351c1c);
     filter: blur(2);
     color: white;
     text-align: center;
     padding: 50px 10px;
+    background: #0e0e0e;
+    filter: brightness(1);
 }
 img{
     width: 20%;
 }
 
+
 .boxes{
     display: flex;
     flex-direction: column;
-    margin: auto;
     align-items: center;
-    filter: blur(2);
-    border-style: solid;
-    border-color: grey;
-    border-width: thin;
     padding: 30px 36px;
-    border-radius: 15px;
     line-height: 5px;
+    text-align: center;
+    aspect-ratio: 1 / 1.5;
+    background-color: black;
+    height: 22vh;
+    position: relative;
+    border-radius: 15px;
 }
+
+.boxes::after,
+.boxes::before{
+    content: '';
+    position: absolute;
+    inset: -.1rem;
+    z-index: -1;
+    background: conic-gradient(
+    from var(--gradient-angle), 
+    black,
+    purple, 
+    blue,
+    red,
+    green,
+    black);
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+    border-radius: 15px;
+}
+
+.boxes::after{
+    filter: blur(0rem);
+}
+
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation{
+    0% {--gradient-angle: 0deg;}
+    100% {--gradient-angle: 360deg;}
+}
+
 
 
 
 div{
     display: grid;
     gap: 2em;
+    margin: auto;
 }
 
 h2{
@@ -88,18 +125,14 @@ p{
     .boxes{
         display: flex;
         flex-direction: column;
-        margin: auto;
         align-items: center;
-        background-color: rgb(53, 28, 28);
-        padding: 62px 103px;
-        border-radius: 10px;
-        border-style: none;
+        padding: 62px 76px;
     }
 
-    #boxesColor{
+    /* #boxesColor{
         background-color: transparent;
         padding: 62px 103px;
-    }
+    }    */
 
     img{
         width: 30%;

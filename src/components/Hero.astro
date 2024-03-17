@@ -1,11 +1,16 @@
+---
+import "../stars.css";
+---
+
+<div id="stars"></div>
 
 <article>
 <h1>Hi!</h1>
 <h2>I'm a web Designer <br> & Developer</h2>
     <div>
-    <a href="#about">FB</a>
-    <a href="#about">IG</a>
-    <a href="#about">In</a>
+        <img id="first" src="/public/PNG/experience3.png" alt="">
+        <img id="second" src="/public/PNG/experience2.png" alt="">
+        <img id="last" src="/public/PNG/experience1.png" alt="">
     </div>
 </article>
 
@@ -42,7 +47,7 @@
 
 
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 999px) {
 
         article{
             margin-top: -12em;
@@ -62,6 +67,22 @@
 
         div{
             margin-bottom: 3em;
+            display: flex;
+            text-align: center;
+        }
+
+
+        #first{
+            width: 10%;
+            height: 10%;
+        }
+        #second{
+            width: 13%;
+            height: 5%;
+        }
+        #last{
+            width: 23%;
+            height: 10%;
         }
     }
 </style>
