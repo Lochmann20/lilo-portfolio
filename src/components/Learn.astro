@@ -41,13 +41,15 @@ article{
 
 #section{
     display: grid;
+    gap: 2em;
 
 & div{
         background-color: black;
-        padding: 20px;
+        padding: 10px;
         position: relative;
         border-radius: 15px;
-        margin-bottom: 2em;
+        width: 50%;
+        margin: auto;
     }
     
     & div::after,
@@ -58,10 +60,9 @@ article{
         z-index: -1;
         background: conic-gradient(
             from var(--gradient-angle),
-            yellow, 
-            purple,
-            yellow,
-            purple);
+            black,
+            white, 
+            black);
             border-radius: inherit;
             animation: rotation 20s linear infinite;
             border-radius: 15px;
@@ -81,6 +82,10 @@ article{
     0% {--gradient-angle: 0deg;}
     100% {--gradient-angle: 360deg;}
     } 
+
+    img{
+        width: 30%;
+    }
 
 }
 
@@ -106,6 +111,11 @@ article{
     
     img{
         width: 50%;
+    }
+
+
+    div{
+        height: 20vh;
     }
 }
 

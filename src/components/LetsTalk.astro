@@ -8,17 +8,21 @@ import "../stars.css";
 
     <h1>Let's Talk</h1>
     <p>Designed and build by LILO with a lot of booster, coffee and love</p>
-
-
+    <img src="/png/coffee.png" alt="" style="margin: auto; width: 40%;">
+    <br>
     <div>
-        <div class="SoMe">
-            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Flinelochmannmoller%3Figsh%3DZWVvamxhdmF0dnBt%26fbclid%3DIwAR3164U7-SqZRhfNNSKkP-vz0WavOsnbrxLMqfdYDFDAlIvRMgKsanz11Jc&h=AT1RVhdCFEDJPajxeChrGXGyH5SIVnsw9WWTuio751tncXBjl2UhTx80_OPhiQyVqG6LG6MI0QqjSOQCyRAajAMqXNIqHApQF-evq69ICiVmkMldEwSsH17yKmrjUG5gESs">
-                <p>IG</p></a>
-            <a href="https://www.linkedin.com/in/line-m%C3%B8ller-a5311a257/"><p>IN</p></a>
-        </div>
-
-
+        <button><a href="#">Contact - Gmail</a></button>
+        <button><a href="/images/myw3schoolsimage.jpg" download>Download CV</a></button>
     </div>
+
+<br>
+
+        <div class="SoMe">
+            <!-- <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Flinelochmannmoller%3Figsh%3DZWVvamxhdmF0dnBt%26fbclid%3DIwAR3164U7-SqZRhfNNSKkP-vz0WavOsnbrxLMqfdYDFDAlIvRMgKsanz11Jc&h=AT1RVhdCFEDJPajxeChrGXGyH5SIVnsw9WWTuio751tncXBjl2UhTx80_OPhiQyVqG6LG6MI0QqjSOQCyRAajAMqXNIqHApQF-evq69ICiVmkMldEwSsH17yKmrjUG5gESs">
+                <p>Instagram</p></a> -->
+            <a href="https://www.linkedin.com/in/line-m%C3%B8ller-a5311a257/"><p>LinkedIn</p></a>
+            <a href="https://www.linkedin.com/in/line-m%C3%B8ller-a5311a257/"><p>Netlify</p></a>
+        </div>
 </article>
 
 
@@ -39,6 +43,39 @@ import "../stars.css";
         justify-content: center;
         gap: 20px;
     }
+
+    .SoMe a{
+        border-style: solid;
+        border-width: thin;
+        border-color: white;
+        padding: 20px;
+        font-size: small;
+    }
+    @media screen and (min-width: 999px){
+    .SoMe a{
+        border-style: solid;
+        border-width: thin;
+        border-color: white;
+        padding: 20px;
+    }
+
+    .SoMe{
+        margin-bottom: 2em;
+    }
+
+    button{
+        padding: 10px 20px;
+        background: transparent;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        border-radius: 25px;
+
+        & a{
+            font-size: x-large;
+        }
+    }
+
+}
 </style>
 
 
