@@ -4,19 +4,19 @@
     <p>Tekst her</p>
 
     <div>
-        <div class="boxes">
+        <div class="hidden" id="boxes">
             <img src="/png/vsc.png" alt="">
             <h2>Visuel Studio Code</h2>
             <p>HTML, CSS, Javascript, NEXT.js</p>
         </div>
 
-        <div class="boxes" >
+        <div class="hidden" id="boxes">
             <img src="/png/blender.png" alt="">
             <h2>Animation</h2>
             <p>3D Blender, Zbrush & Clip Studio Paint</p>
         </div>
 
-        <div class="boxes" >
+        <div class="hidden" id="boxes">
             <img src="/png/photoshop.png" alt="">
             <h2>UI / UX</h2>
             <p>Photoshop, Illustrator, Indesign</p>
@@ -25,13 +25,36 @@
 </article>
 
 <style>
+.hidden{
+    opacity: 0;
+    transition: ease 2s;
+    transform: translate(0%);
+    filter: blur(5px);
+}
+
+.hidden:nth-child(2){
+    transition-delay: 400ms;
+}
+.hidden:nth-child(3){
+    transition-delay: 800ms;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+
+
+
+
 
 article{
     filter: blur(2);
     color: white;
     text-align: center;
     padding: 50px 10px;
-    background: #0e0e0e;
+    background: #1c1c1c;
     filter: brightness(1);
 }
 img{
@@ -39,7 +62,7 @@ img{
 }
 
 
-.boxes{
+#boxes{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,10 +71,18 @@ img{
     background-color: black;
     position: relative;
     border-radius: 15px;
+    border-color: white;
+    border-style: solid;
+    border-width: thin;
 }
 
-.boxes::after,
-.boxes::before{
+#boxes:hover{
+    background-color: rgb(79, 79, 79);
+    transition-delay: 0ms;
+}
+
+/* #boxes::after,
+#boxes::before{
     content: '';
     position: absolute;
     inset: -.1rem;
@@ -66,7 +97,7 @@ img{
     border-radius: 15px;
 }
 
-.boxes::after{
+#boxes::after{
     filter: blur(0rem);
 }
 
@@ -79,7 +110,7 @@ img{
 @keyframes rotation{
     0% {--gradient-angle: 0deg;}
     100% {--gradient-angle: 360deg;}
-}
+} */
 
 
 
@@ -123,9 +154,10 @@ p{
         grid-template-columns: 1fr 1fr;
         width: 50%;
         margin: auto;
+        gap: 2em;
     }
 
-    .boxes{
+    #boxes{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -152,6 +184,25 @@ p{
     }
     
 </style>
+
+
+
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+    
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
 
 
 

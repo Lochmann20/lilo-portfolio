@@ -1,14 +1,14 @@
 <article id="Cv">
 <h1>Experience</h1>
 <section>
-<div class="box">
+<div id="box" class="hidden">
     <h2>2023</h2>
   <img src="/public/circle.jpg" alt="" width="5%">
     <h3>Studentermedhjælper / Onsite Manager & Site Management</h3>
     <h4>3 Business</h4>
     <p>Som Onsite manager og Site Management, har jeg stået for xxxx</p> 
 </div>
-<div class="box">
+<div id="box" class="hidden">
     <h2>2022</h2>
   <img src="/public/circle.jpg" alt="" width="5%">
   <div class="indhold">  
@@ -24,6 +24,28 @@
 
 
 <style>
+/* Text animation */
+
+.hidden{
+    opacity: 0;
+    transition: ease 1.8s;
+    transform: translateY(10%);
+    filter: blur(5px);
+}
+
+.hidden:nth-child(2){
+  transition-delay: 400ms;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+
+
+
+
 article{
   color: white;
   padding: 40px;
@@ -35,7 +57,7 @@ img{
 }
 
 
-.box{
+#box{
     display: flex;
     margin-top: 2em;
     flex-direction: column;
@@ -44,9 +66,12 @@ img{
     border-radius: 15px;
     background-color: black;
     padding: 20px;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
 }
 
-.box::after,
+/* .box::after,
 .box::before{
     content: '';
     position: absolute;
@@ -70,6 +95,8 @@ img{
     filter: blur(0rem);
 }
 
+
+
 @property --gradient-angle{
     syntax: "<angle>";
     initial-value: 0deg;
@@ -79,7 +106,7 @@ img{
 @keyframes rotation{
     0% {--gradient-angle: 0deg;}
     100% {--gradient-angle: 360deg;}
-}
+} */
 
 h2, h3, h4, p{
     margin-top: 0;
@@ -105,7 +132,7 @@ p{
     padding: 40px;
   }
 
-  .box{
+  #box{
     align-items: start;
 
     & h2{
@@ -158,3 +185,23 @@ p{
   
 }
 </style>
+
+
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          console.log(entry)
+          if(entry.isIntersecting) {
+              entry.target.classList.add('show');
+          } else {
+              entry.target.classList.remove('show');
+          }
+      });
+  });
+  
+  const hiddenElements = document.querySelectorAll("hidden");
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>

@@ -4,7 +4,7 @@ import "../stars.css";
 
 <div id="stars"></div>
 
-<article id="AboutUs">
+<article id="AboutUs" class="hidden">
     <h1>About</h1>
     <p>Hi I am Line <br> <br>
         I use my passion and skills for creative digital products and experiences. <br>
@@ -17,6 +17,24 @@ import "../stars.css";
 </article>
 
 <style>
+    /* Text animation */
+.hidden{
+    opacity: 0;
+    transition: ease 2s;
+    transform: translateY(10%);
+    filter: blur(5px);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+
+
+
+
+
     #AboutUs{
         scroll-behavior: smooth;
     }
@@ -66,3 +84,23 @@ import "../stars.css";
         }
     }
 </style>
+
+
+
+
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+    
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>

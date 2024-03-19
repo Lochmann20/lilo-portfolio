@@ -9,17 +9,17 @@ import type { Code } from "astro:components";
     </p>
 
 <section id="section">
-    <div>
+    <div class="hidden">
         <img src="/png/unity-icon.png" alt="" style="border-radius: 25px;">
         <h2>Unity</h2>
         <p></p>
     </div>
-    <div>
+    <div class="hidden">
         <img src="" alt="">
         <h2>Animation</h2>
         <p>tekst her</p>
     </div>
-    <div>
+    <div class="hidden">
         <img src="" alt="">
         <h2>Gaming Development</h2>
         <p>tekst her</p>
@@ -30,6 +30,35 @@ import type { Code } from "astro:components";
 
 
 <style>
+/* Text animation */
+
+.hidden{
+    opacity: 0;
+    transition: ease 1.8s;
+    transform: translate(0%);
+    filter: blur(5px);
+}
+
+.hidden:nth-child(2){
+  transition-delay: 400ms;
+}
+
+.hidden:nth-child(3){
+  transition-delay: 800ms;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+
+
+
+
+
+
+
+
 article{
     color: white;
     text-align: center;
@@ -48,11 +77,12 @@ article{
         padding: 10px;
         position: relative;
         border-radius: 15px;
-        width: 70%;
+        width: 50%;
         margin: auto;
+        border-style: solid;
     }
     
-    & div::after,
+    /* & div::after,
     div::before{
         content: '';
         position: absolute;
@@ -81,7 +111,7 @@ article{
     @keyframes rotation{
     0% {--gradient-angle: 0deg;}
     100% {--gradient-angle: 360deg;}
-    } 
+    }  */
 
     img{
         width: 30%;
@@ -150,3 +180,20 @@ article{
 
 
 
+
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+    
+    const hiddenElements = document.querySelectorAll("hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>

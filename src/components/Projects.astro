@@ -3,70 +3,70 @@
     <h3>Animation</h3>
 
 <div>
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="Ashoka" src="/Ashoka.jpg" alt="">
         <h1>Ashoka</h1>
         <p>Drawn in Procreate</p>
     </section>
 
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="Tony" src="/png/Tony.png" alt="" style="background: #5d0000;">
         <h1>Tony Stark</h1>
         <p>Drawn in Procreate</p>
     </section>
 
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="MM" src="/png/Monroe.png" alt="" >
         <h1>Marilyn Monroe</h1>
         <p>Drawn in Clip Studio Paint</p>
     </section>
 
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="BlackW" src="/png/marvel.png" alt="">
         <h1>Black Widow</h1>
         <p>Drawn in Clip Studio Paint</p>
     </section>
 
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="Monster" src="/monster.jpg" alt="">
         <h1>Monster</h1>
         <p>Drawn in Procreate</p>
     </section>
 
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="Rødvin" src="/png/Druer.png" alt="">
         <h1>Red Wine</h1>
         <p>Build and Painted in 3D Blender</p>
     </section>
 
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="Coffee" src="/png/coffee.png" alt="">
         <h1>Coffee House</h1>
         <p>Build and Painted in 3D Blender</p>
     </section>
 
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="The" src="/png/The.png" alt="">
         <h1>The Break</h1>
         <p>Build and Painted in 3D Blender</p>
     </section>
 
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="Blue" src="/png/blue.png" alt="">
         <h1>Black Widow</h1>
         <p>Build and Painted in 3D Blender, with fur that moves by the motion from The Blue</p>
     </section>
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="Picha" src="/png/Picha.png" alt="">
         <h1>Detective Picha</h1>
         <p>Drawn In Hand</p>
     </section>
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="David" src="/png/david.png" alt="">
         <h1>David</h1>
         <p>Drawn In Hand</p>
     </section>
-    <section class="Ani">
+    <section id="Ani" class="hidden">
         <img id="Sonic" src="/png/PinkSonic.png" alt="">
         <h1>Pink Sonic</h1>
         <p>Drawn In Hand</p>
@@ -76,13 +76,13 @@
 
     <h3>Web</h3>
  <div >
-    <section class="Web">
+    <section id="Web" class="hidden">
         <img id="Vildmad" src="/png/vildmad.png" alt="">
         <h1>Vild Mad</h1>
         <p>A website for children, which encourages them to learn, bye getting there attension. </p>
         <p><a href="https://jocular-melba-5bfa72.netlify.app/">See More</a></p>
     </section>
-    <section class="Web">
+    <section id="Web" class="hidden">
         <img id="VW" src="/png/Vahlwood.png" alt="">
         <h1>Vahl Wood</h1>
         <p>Web site was Developed and Design by me and my three others from my team, in Second Semester.
@@ -90,13 +90,13 @@
         </p>
         <p><a href="https://mundtlig2024.netlify.app/">See More</a></p>
     </section>
-    <section class="Web">
+    <section id="Web" class="hidden">
         <img id="CA" src="/png/CA.png" alt="">
         <h1>CA</h1>
         <p>A redesign for CA, Developed by the same team from Vahl Wood</p>
         <p><a href="https://tema9.netlify.app/">See More</a></p>
     </section>
-    <section class="Web">
+    <section id="Web" class="hidden">
         <img id="TODO" src="/png/todolist.png" alt="">
         <h1>To Do Task</h1>
         <p>A To Do List created by using Javascript</p>
@@ -108,6 +108,18 @@
 
 
 <style>
+.hidden{
+    opacity: 0;
+    transition: ease 2s;
+    transform: translate(0%);
+    filter: blur(5px);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+
 
 
 article{
@@ -124,18 +136,21 @@ div{
     gap: 2em;
 }
 
-.Ani, .Web{
+#Ani, #Web{
     padding: 30px 30px;
     text-align: center;
     background-color: black;
     position: relative;
     border-radius: 15px;
+    border-style: solid;
+    border-width: thin;
+    border-color: red;
 }
 
-    .Ani::after,
-    .Ani::before,
-    .Web::after,
-    .Web::before{
+    /* #Ani:after,
+    #Ani:before,
+    #Web:after,
+    #Web:before{
     content: '';
     position: absolute;
     inset: -.1rem;
@@ -150,8 +165,8 @@ div{
     border-radius: 15px;
     }
 
-    .Ani::after,
-    .Web::after{
+    #Ani:after,
+    #Web:after{
     filter: blur(0rem);
    }
 
@@ -164,9 +179,9 @@ div{
     @keyframes rotation{
     0% {--gradient-angle: 0deg;}
     100% {--gradient-angle: 360deg;}
-    }
+    } */
 
-.Web a:hover{
+#Web a:hover{
     background-color: rgba(240, 248, 255, 0.171);
 }
 img{
@@ -237,7 +252,7 @@ p{
         padding: 5em 20em;
     }
 
-    .Ani{
+    #Ani{
     align-items: center;
     line-height: 5px;
     text-align: center;
@@ -245,7 +260,7 @@ p{
     border-radius: 15px;
     } 
 
-    .Web{
+    #Web{
         background-color: black;
         padding: 20px;
         border-radius: 15px;
@@ -323,3 +338,23 @@ p{
 
 </style>
 
+
+
+
+
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+    
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
