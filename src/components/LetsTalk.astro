@@ -8,7 +8,7 @@ import "../stars.css";
 
     <h1>Let's Talk</h1>
     <p>Designed and build by LILO with a lot of booster, coffee and love</p>
-    <img src="/png/coffee.png" alt="" style="margin: auto; width: 40%;">
+    <img src="/png/coffee.png" alt="" style="margin: auto;">
     <br>
     <div>
         <button><a href="mailto:linemoller1907@gmail.com">Contact - Gmail</a></button>
@@ -30,6 +30,21 @@ import "../stars.css";
     article{
         color: white;
         text-align: center;
+
+        & img{
+            width: 85%;
+            padding: 15px;
+        }
+
+        & button{
+            background-color: transparent;
+            padding: 15px;
+            border-radius: 25px;
+        }
+
+        & button:hover{
+            background-color: rgb(69, 69, 69);
+        }
     }
 
     a{
@@ -53,6 +68,11 @@ import "../stars.css";
         border-color: white;
         padding: 20px;
         font-size: small;
+    }
+
+    p{
+        width: 80%;
+        margin: auto;
     }
     @media screen and (min-width: 599px){
     .SoMe a{
