@@ -33,9 +33,6 @@
     filter: blur(5px);
 }
 
-.hidden:nth-child(2){
-  transition-delay: 400ms;
-}
 .show{
     opacity: 1;
     filter: blur(0);
@@ -128,6 +125,10 @@ p{
 }
 
 @media screen and (min-width: 599px){
+  .hidden:nth-child(2){
+  transition-delay: 400ms;
+}
+
   article{
     padding: 40px;
   }
