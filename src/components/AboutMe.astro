@@ -5,10 +5,10 @@ import "../stars.css";
 <div id="stars"></div> -->
 
 <article id="AboutUs" class="hidden">
-    <h1>About</h1>
+    <h1 style="color: rgb(182 115 255);">About</h1>
     <p>Hi I am Line <br> <br>
-        I use my passion and skills for creative digital products and experiences. <br>
-        I am fascinated by programming and its ability to connect systems. <br>
+        I use my passion and skills for creative digital products and experiences.
+        I am fascinated by programming and its ability to connect systems.
         I utilize my passion, experience, and motivational mindset to strengthen
         and develop my knowledge within my competencies.
         I always look forward to new challenges and tasks to grow
@@ -17,6 +17,7 @@ import "../stars.css";
 </article>
 
 <style>
+
     /* Text animation */
 .hidden{
     opacity: 0;
@@ -30,24 +31,21 @@ import "../stars.css";
     transform: translateY(0);
 }
 
-
-
-
-
+article{
+    padding: 0em 2em;
+    padding-top: 8em;
+    padding-bottom: 10em;
+    }
 
     #AboutUs{
         scroll-behavior: smooth;
     }
 
-    article{
-        /* background: radial-gradient(circle at bottom left, #351c1c, #131313, #351c1c); */
-        /* background-color: black; */
-        padding: 10px;
-    }
-
     h1{
         text-align: start;
-        font-size: larger;
+        font-family: fantasy;
+        letter-spacing: 1px;
+        font-size: 30px;
     }
 
     p{
@@ -56,6 +54,9 @@ import "../stars.css";
     }
 
     @media screen and (min-width: 500px) {
+        article{
+            padding: 50px;
+        }
         h1{
             font-size: 30px;
         }
@@ -63,7 +64,7 @@ import "../stars.css";
 
     @media screen and (min-width: 1000px) {
         article{
-            padding: 2em 20em;
+            padding: 15em 20em;
 
             & img{
                
@@ -71,13 +72,12 @@ import "../stars.css";
         }
 
         h1{
-            font-size: 30px;
-            margin-left: 2em;
+            font-size: 45px;
+            margin-left: 2.3em;
         }
 
         & p{
-            font-size: 20px;
-            width: 70%;
+            font-size: 30px;
             margin-top: 1em;
             text-align: start;
             margin-left: 3.5em;

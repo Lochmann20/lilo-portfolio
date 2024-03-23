@@ -7,7 +7,7 @@ import "../stars.css";
 <article  id="LetsTalk">
 
     <h1>Let's Talk</h1>
-    <p>Designed and build by LILO with a lot of booster, coffee and love</p>
+    <h2>Designed and build by LILO with a lot of booster, coffee and love</h2>
     <img src="/png/coffee.png" alt="" style="margin: auto;">
     <br>
     <div>
@@ -31,6 +31,7 @@ import "../stars.css";
         color: white;
         text-align: center;
         margin-bottom: 5em;
+        padding: 10em 0em;
 
         & img{
             width: 85%;
@@ -45,6 +46,21 @@ import "../stars.css";
 
         & button:hover{
             background-color: rgb(69, 69, 69);
+        }
+
+        & h1{
+            font-family: fantasy;
+            letter-spacing: 1px;
+            font-size: 30px;
+            text-align: center;
+            color: rgb(182 115 255);
+            margin-bottom: 0em;
+        }
+
+        h2{
+            font-size: small;
+            width: 70%;
+            margin: auto;
         }
     }
 
@@ -72,10 +88,20 @@ import "../stars.css";
     }
 
     p{
-        width: 80%;
         margin: auto;
     }
     @media screen and (min-width: 599px){
+
+    #LetsTalk{
+        h1{
+        font-size: 50px;
+        }
+
+        h2{
+            font-size: 15px;
+
+        }
+    }
     .SoMe a{
         border-style: solid;
         border-width: thin;
@@ -95,14 +121,26 @@ import "../stars.css";
         border-radius: 25px;
 
         & a{
-            font-size: x-large;
+            font-size: large;
         }
     }
+    p{
+        font-size: 20px;
+        padding: 20px 20px;
+        text-align: center;
+    }
+
+   
+    
 
 }
 
 
 @media screen and (min-width: 999px){
+
+    #LetsTalk{
+       padding: 6em 0px;
+    }
     #LetsTalk img{
         width: 50%;
     }
@@ -111,46 +149,3 @@ import "../stars.css";
 </style>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <section id="SoMe-Contact">
-    <section class="SoMe-Contact">
-        <h1>SoMe</h1>
-        <div class="SoMe">
-            <a href="https://www.facebook.com/profile.php?id=1219400061&locale=da_DK"><p>FB</p></a>
-            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Flinelochmannmoller%3Figsh%3DZWVvamxhdmF0dnBt%26fbclid%3DIwAR3164U7-SqZRhfNNSKkP-vz0WavOsnbrxLMqfdYDFDAlIvRMgKsanz11Jc&h=AT1RVhdCFEDJPajxeChrGXGyH5SIVnsw9WWTuio751tncXBjl2UhTx80_OPhiQyVqG6LG6MI0QqjSOQCyRAajAMqXNIqHApQF-evq69ICiVmkMldEwSsH17yKmrjUG5gESs">
-                <p>IG</p></a>
-            <a href="https://www.linkedin.com/in/line-m%C3%B8ller-a5311a257/"><p>IN</p></a>
-        </div>
-    </section>
-    
-    <section class="SoMe-Contact"> 
-    <h1>Contact</h1>
-        <div id="contact-container">
-        <div class="contact-info">
-           <img id="iphone" src="images/PNG/iPhone.png" alt="">
-           <p>+45 42 75 35 84</p> <br>
-        </div>
-        <hr class="hr">
-    
-    
-        <div class="contact-info">
-           <img id="mail" src="images/PNG/mail.png" alt="">
-           <p class="p">Linemoller1907@gmail.com</p> <br>
-        </div>
-        <hr class="hr2">
-        </div>
-    </section>
-    </section> -->

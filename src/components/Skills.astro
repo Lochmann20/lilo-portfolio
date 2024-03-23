@@ -6,26 +6,24 @@ import "../stars.css";
 
 
 
-<article id="Cv">
+<article >
 <h1>Experience</h1>
 <section>
 <div id="box" class="hidden">
     <h2>2023</h2>
-  <img src="/public/circle.jpg" alt="" width="5%">
-    <h3>Studentermedhjælper / Onsite Manager & Site Management</h3>
-    <h4>3 Business</h4>
-    <p>Som Onsite manager og Site Management, har jeg stået for xxxx</p> 
+    <h3>Student Assistent / Onsite Manager & Site Management at 3Business</h3>
+    <p>During the time I have worked for 3Business, I started adding more and more things up on the website. 
+      I ended up being responsible for 3Business itself for about half a year. 
+      While I have been in charge of 3Business, I have also had almost everything transferred to our future system.</p> 
 </div>
 <div id="box" class="hidden">
     <h2>2022</h2>
-  <img src="/public/circle.jpg" alt="" width="5%">
-  <div class="indhold">  
-    <h3>3D Animation</h3>
-    <h4>3D Boot Camp - CADA Truemax </h4>
-    <h4>3D Blender</h4>
-    <h4>Zbrush</h4>
-    <p>Tekst</p> 
-  </div>
+    <h3>3D Animation (course) at CADA Truemax</h3>
+    <h4>3D Boot Camp in 3D Blender & Zbrush</h4>
+    <p>I have always been incredibly creative, especially when it comes to drawing.
+      I taught myself 2D and 3D animtion throught video turorials. <br>
+    I took a course at CADA-Trumax to get some learning and see if animation was the diretion I wanted to pursue. 
+  And after that course, I became hooked and have wanted to learn more ever since. </p> 
 </div>
 </section>
 </article>
@@ -53,7 +51,8 @@ import "../stars.css";
 
 article{
   color: white;
-  padding: 40px;
+  padding: 0em 2em;
+  padding-bottom: 2em;
   text-align: start;
   
 }
@@ -66,7 +65,6 @@ img{
     display: flex;
     margin-top: 2em;
     flex-direction: column;
-    height: 22vh;
     position: relative;
     border-radius: 15px;
     background-color: black;
@@ -75,43 +73,13 @@ img{
     border-color: white;
     border-width: thin;
 }
-
-/* .box::after,
-.box::before{
-    content: '';
-    position: absolute;
-    inset: -.2rem;
-    z-index: -1;
-    background: conic-gradient(
-    from var(--gradient-angle), 
-    black,
-    purple, 
-    blue,
-    purple,
-    blue,
-    purple,
-    black);
-    border-radius: inherit;
-    animation: rotation 20s linear infinite;
-    border-radius: 15px;
-}
-
-.box::after{
-    filter: blur(0rem);
-}
-
-
-
-@property --gradient-angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-@keyframes rotation{
-    0% {--gradient-angle: 0deg;}
-    100% {--gradient-angle: 360deg;}
-} */
+ h1{
+  font-family: fantasy;
+    letter-spacing: 2px;
+    color: rgb(182 115 255);
+    font-size: 30px;
+    text-align: center;
+ }
 
 h2, h3, h4, p{
     margin-top: 0;
@@ -141,6 +109,11 @@ p{
     padding: 40px;
   }
 
+  h1{
+    font-size: 50px;
+    text-align: start;
+  }
+
   #box{
     align-items: start;
 
@@ -150,17 +123,18 @@ p{
 
 
     & h3{
-      font-size: 35px;
+      font-size: 30px;
+      color: rgb(182 115 255);
     }
 
 
     & h4{
-      font-size: 25px;
+      font-size: 20px;
     }
 
 
     & p{
-      font-size: 20px;
+      font-size: 15px;
     }
   }
   
@@ -175,10 +149,11 @@ p{
 
   }
 
-  .box{
+  #box{
     align-items: center;
     display: grid;
-    padding: 20px
+    padding: 20px;
+    gap: 5px;
   }
 
 
@@ -190,7 +165,9 @@ p{
     margin-bottom: 2em;
   }
 
-
+  h4{
+    font-size: 10px;
+  }
   
 }
 </style>

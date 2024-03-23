@@ -1,7 +1,12 @@
 
 <article id="Cv">
     <h1>What you will get</h1>
-    <p>Tekst her</p>
+    <h3>What sets me apart is my dedication, quick learning ability, a strong work ethic, 
+        and a belief in delivering my work when I am satisfied with nothing less than perfection. 
+        I am confident that I can demonstrate my value as a dedicated team member. 
+        And I am ready to take on any challenges that comes my way. <br>
+        My mindset is characterized by constant creativity, and I remain curious about everything that interests me, 
+        I enjoy the process of personal development, as I believe there is never a limit to how much one can learn. </h3>
 
     <div>
         <div class="hidden" id="boxes">
@@ -47,7 +52,7 @@ article{
     filter: blur(2);
     color: white;
     text-align: center;
-    padding: 50px 10px;
+    padding: 6em 1em;
     background: #1c1c1c;
     filter: brightness(1);
 }
@@ -61,9 +66,7 @@ img{
     flex-direction: column;
     align-items: center;
     padding: 30px 36px;
-    text-align: center;
     background-color: black;
-    position: relative;
     border-radius: 15px;
     border-color: white;
     border-style: solid;
@@ -74,39 +77,6 @@ img{
     background-color: rgb(79, 79, 79);
     transition-delay: 0ms;
 }
-
-/* #boxes::after,
-#boxes::before{
-    content: '';
-    position: absolute;
-    inset: -.1rem;
-    z-index: -1;
-    background: conic-gradient(
-    from var(--gradient-angle), 
-    black,
-    white,
-    black);
-    border-radius: inherit;
-    animation: rotation 20s linear infinite;
-    border-radius: 15px;
-}
-
-#boxes::after{
-    filter: blur(0rem);
-}
-
-@property --gradient-angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-@keyframes rotation{
-    0% {--gradient-angle: 0deg;}
-    100% {--gradient-angle: 360deg;}
-} */
-
-
 
 
 div{
@@ -119,8 +89,24 @@ h2{
     font-size: large;
 }
 
+h3{
+    font-size: large;
+    font-weight: lighter;
+    text-align: start;
+    padding: 20px;
+    margin-top: -1em;
+}
+
 p{
     font-size: small;
+}
+
+h1{
+    font-family: fantasy;
+    letter-spacing: 1px;
+    color: rgb(182 115 255);
+    font-size: 30px;
+    text-align: center;
 }
 
 
@@ -137,22 +123,35 @@ p{
 
     .hidden:nth-child(2){
     transition-delay: 400ms;
-}
+    }
     .hidden:nth-child(3){
     transition-delay: 800ms;
-}
+    }
+
+    h3{
+        font-size: x-large;
+        width: 60%;
+        margin: auto;
+        margin-top: -1em;
+        margin-bottom: 2em;
+        text-align: center;
+    }
 }
 
+
  @media screen and (min-width: 999px){
-        article{
+    article{
         color: white;
-        padding: 60px 50px;
+        padding: 8em 10em;
+
+        & h1{
+            margin-top: 0;
+        }
     }
 
     div {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 50%;
+        grid-template-columns: 1fr 1fr 1fr;
         margin: auto;
         gap: 2em;
     }
@@ -175,7 +174,7 @@ p{
 
     h1{
         text-align: center;
-        font-size: 30px;
+        font-size: 50px;
     }
 
     p{

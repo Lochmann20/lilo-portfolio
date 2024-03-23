@@ -2,9 +2,7 @@
 import type { Code } from "astro:components";
 ---
 
-
-
-<article>
+<article id="Learn">
     <h1>What I woud like to learn more about</h1>
     <p>My passion have always been about Animation and Gaming, but what I doesn't have much experience in is Unity or Game Development. 
         But I wnat to learn more about animtion and unity.
@@ -12,19 +10,25 @@ import type { Code } from "astro:components";
 
 <section id="section">
     <div class="hidden">
+        <div class="imgUAG">
         <img src="/png/unity-icon.png" alt="" style="border-radius: 25px;">
+        </div>
         <h2>Unity</h2>
-        <p></p>
     </div>
     <div class="hidden">
-        <img src="" alt="">
+        <div class="imgUAG">
+        <img src="/png/blender.png" alt="">
+        <img src="/png/Zbrush.png" alt="">
+        </div>
         <h2>Animation</h2>
-        <p>tekst her</p>
     </div>
     <div class="hidden">
-        <img src="" alt="">
-        <h2>Gaming Development</h2>
-        <p>tekst her</p>
+        <div class="imgUAG">
+        <img src="/png/javascript.png" alt="">
+        <img src="/png/python.png" alt="">
+        <img src="/png/c++.png" alt="">
+        </div>
+        <h2>Game Development</h2>
     </div>
 </section>
 </article>
@@ -32,6 +36,10 @@ import type { Code } from "astro:components";
 
 
 <style>
+
+#Learn{
+        scroll-behavior: smooth;
+    }
 /* Text animation */
 
 .hidden{
@@ -39,6 +47,20 @@ import type { Code } from "astro:components";
     transition: ease 1.8s;
     transform: translate(0%);
     filter: blur(5px);
+    height: 20vh;
+
+
+    .imgUAG{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-style: black;
+        background-color: transparent;
+    }
+
+    img{
+        padding: 10px;
+    }
 }
 
 .show{
@@ -51,111 +73,106 @@ import type { Code } from "astro:components";
 article{
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 5em 0em;
     /* background: radial-gradient(circle at bottom left, #351c1c, #131313, #351c1c); */
     /* background-color: #0e0e0e; */
     filter: brightness(1);
+
+    h1{
+        font-family: fantasy;
+        letter-spacing: 1px;
+        font-size: 30px;
+        text-align: center;
+        color: rgb(182 115 255);
+    }
 }
 
 #section{
     display: grid;
     gap: 2em;
-
-& div{
-        background-color: black;
-        padding: 10px;
+}
+& .hidden{
+        padding: 10px 30px;
         position: relative;
-        border-radius: 15px;
         width: 50%;
         margin: auto;
         border-style: solid;
         border-width: thin;
     }
-    
-    /* & div::after,
-    div::before{
-        content: '';
-        position: absolute;
-        inset: -.1rem;
-        z-index: -1;
-        background: conic-gradient(
-            from var(--gradient-angle),
-            black,
-            white, 
-            black);
-            border-radius: inherit;
-            animation: rotation 20s linear infinite;
-            border-radius: 15px;
-    }
-    
-    div::after{
-        filter: blur(0rem);
-    }
-
-    @property --gradient-angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-    }
-
-    @keyframes rotation{
-    0% {--gradient-angle: 0deg;}
-    100% {--gradient-angle: 360deg;}
-    }  */
 
     img{
         width: 30%;
     }
 
-    h1{
-        font-size: 30px;
-    }
-
     h2{
-        font-size: 25px;
+        font-size: medium;
+        margin-top: 3em;
     }
 
     p{
-        font-size: 14px;
+        font-size: 15px;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 2em;
     }
 
-}
+
 
 @media screen and (min-width: 599px){
-    .hidden:nth-child(2){
+article{
+& h1{
+    font-size: 45px;
+}
+
+& p{
+    font-size: 25px;
+}
+
+section{
+    display: flex;
+    padding: 20px;
+
+    /* Animation */
+& .hidden:nth-child(2){
   transition-delay: 400ms;
 }
 
-.hidden:nth-child(3){
+& .hidden:nth-child(3){
   transition-delay: 800ms;
 }
 
+& .hidden{
+    padding: 10px 50px;
 
-    #section{
-        display: flex;
-        padding: 20px;
-    }
-    & div{
-        padding: 16px;
-        position: relative;
-        border-radius: 15px;
-        width: block;
-        margin: block;
+    & img{
+        width: 60%;
     }
 }
 
+& h2{
+    margin-top: 2em;
+    font-size: large;
+}
+
+
+& div{
+    padding: 16px;
+    position: relative;
+    width: block;
+    margin: block;
+}
+}
+}
+}
+
+
 
 @media screen and (min-width: 999px){
-
-    article{
+article{
         color: white;
         text-align: center;
-        padding: 1em 35em;
-    }
+        padding: 12em 35em;
 
-    p{
-        font-size: medium;
-    }
 
 #section{
     display: flex;
@@ -163,18 +180,12 @@ article{
     gap: 3em;
     margin-top: 2em;
     margin-bottom: 2em;
-    
-    img{
-        width: 50%;
-    }
-
-
-    div{
-        height: 20vh;
-    }
+}
 }
 
 }
+
+
 </style>
 
 

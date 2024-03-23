@@ -1,80 +1,80 @@
 <article id="Projects">
     <h2>Projects</h2>
-    <h3>Animation</h3>
+    <!-- <h3>Animation</h3> -->
 
 <div>
     <section id="Ani" class="hidden">
         <img id="Ashoka" src="/Ashoka.jpg" alt="">
         <h1>Ashoka</h1>
-        <p>Drawn in Procreate</p>
+        <p>2D Animation drawn in Procreate</p>
     </section>
 
     <section id="Ani" class="hidden">
         <img id="Tony" src="/png/Tony.png" alt="" style="background: #5d0000;">
         <h1>Tony Stark</h1>
-        <p>Drawn in Procreate</p>
+        <p>2D Animation drawn in Procreate</p>
     </section>
 
     <section id="Ani" class="hidden">
         <img id="MM" src="/png/Monroe.png" alt="" >
         <h1>Marilyn Monroe</h1>
-        <p>Drawn in Clip Studio Paint</p>
+        <p>2D Animation drawn in Clip Studio Paint</p>
     </section>
 
     <section id="Ani" class="hidden">
         <img id="BlackW" src="/png/marvel.png" alt="">
         <h1>Black Widow</h1>
-        <p>Drawn in Clip Studio Paint</p>
+        <p>2D Animation drawn in Clip Studio Paint</p>
     </section>
 
     <section id="Ani" class="hidden">
         <img id="Monster" src="/monster.jpg" alt="">
         <h1>Monster</h1>
-        <p>Drawn in Procreate</p>
+        <p>2D Animation drawn in Procreate</p>
     </section>
 
     <section id="Ani" class="hidden">
         <img id="Rødvin" src="/png/Druer.png" alt="">
         <h1>Red Wine</h1>
-        <p>Build and Painted in 3D Blender</p>
+        <p>3D Animation build and painted in 3D Blender</p>
     </section>
 
     <section id="Ani" class="hidden">
         <img id="Coffee" src="/png/coffee.png" alt="">
         <h1>Coffee House</h1>
-        <p>Build and Painted in 3D Blender</p>
+        <p>3D Aniamtion build and painted in 3D Blender</p>
     </section>
 
     <section id="Ani" class="hidden">
         <img id="The" src="/png/The.png" alt="">
-        <h1>The Break</h1>
-        <p>Build and Painted in 3D Blender</p>
+        <h1>The time</h1>
+        <p>3D Animation build and painted in 3D Blender</p>
     </section>
 
     <section id="Ani" class="hidden">
         <img id="Blue" src="/png/blue.png" alt="">
-        <h1>Black Widow</h1>
-        <p>Build and Painted in 3D Blender, with fur that moves by the motion from The Blue</p>
+        <h1>Blue</h1>
+        <p>3D Animation build and painted in 3D Blender, with fur that moves by movement.</p>
     </section>
     <section id="Ani" class="hidden">
         <img id="Picha" src="/png/Picha.png" alt="">
         <h1>Detective Picha</h1>
-        <p>Drawn In Hand</p>
+        <p>2D ANimtion drawn in hand</p>
     </section>
     <section id="Ani" class="hidden">
         <img id="David" src="/png/david.png" alt="">
         <h1>David</h1>
-        <p>Drawn In Hand</p>
+        <p>2D Animation drawn in hand</p>
     </section>
     <section id="Ani" class="hidden">
         <img id="Sonic" src="/png/PinkSonic.png" alt="">
         <h1>Pink Sonic</h1>
-        <p>Drawn In Hand</p>
+        <p>2D Animation drawn in hand</p>
     </section>
 </div>
 
 
-    <h3>Web</h3>
+    <!-- <h3>Web</h3> -->
  <div >
     <section id="Web" class="hidden">
         <img id="Vildmad" src="/png/vildmad.png" alt="">
@@ -125,7 +125,7 @@
 article{
     background: #101010;
     color: white;
-    padding: 20px 30px;
+    padding: 6em 1em;
     display: grid;
     gap: 1em;
     filter: brightness(1);
@@ -144,42 +144,9 @@ div{
     border-radius: 15px;
     border-style: solid;
     border-width: thin;
-    border-color: red;
+    border-color: white;
 }
 
-    /* #Ani:after,
-    #Ani:before,
-    #Web:after,
-    #Web:before{
-    content: '';
-    position: absolute;
-    inset: -.1rem;
-    z-index: -1;
-    background: conic-gradient(
-    from var(--gradient-angle), 
-    black,
-    red,    
-    black);
-    border-radius: inherit;
-    animation: rotation 20s linear infinite;
-    border-radius: 15px;
-    }
-
-    #Ani:after,
-    #Web:after{
-    filter: blur(0rem);
-   }
-
-   @property --gradient-angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-    }
-
-    @keyframes rotation{
-    0% {--gradient-angle: 0deg;}
-    100% {--gradient-angle: 360deg;}
-    } */
 
 #Web a:hover{
     background-color: rgba(240, 248, 255, 0.171);
@@ -189,8 +156,17 @@ img{
     border-radius: 15px;
 }
 
+h2{
+    text-align: start;
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(182 115 255);
+}
 h3{
     text-align: center;
+    margin-top: -1em;
 }
 a{
     color: white;
@@ -237,7 +213,11 @@ p{
 
 @media screen and (min-width: 599px){
     article{
-        padding: 20px 30px;
+        padding: 12em 0em;
+    }
+
+    h2{
+        font-size: 50px;
     }
     
     div{
