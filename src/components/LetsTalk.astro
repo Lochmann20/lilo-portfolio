@@ -8,21 +8,24 @@ import "../stars.css";
 
     <h1>Let's Talk</h1>
     <h2>Designed and build by LILO with a lot of booster, coffee and love</h2>
-    <img src="/png/coffee.png" alt="" style="margin: auto;">
-    <br>
+    <div class="SoMe">
+        <!-- <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Flinelochmannmoller%3Figsh%3DZWVvamxhdmF0dnBt%26fbclid%3DIwAR3164U7-SqZRhfNNSKkP-vz0WavOsnbrxLMqfdYDFDAlIvRMgKsanz11Jc&h=AT1RVhdCFEDJPajxeChrGXGyH5SIVnsw9WWTuio751tncXBjl2UhTx80_OPhiQyVqG6LG6MI0QqjSOQCyRAajAMqXNIqHApQF-evq69ICiVmkMldEwSsH17yKmrjUG5gESs">
+            <p>Instagram</p></a> -->
+        <a href="https://www.linkedin.com/in/line-m%C3%B8ller-a5311a257/"><p>LinkedIn</p></a>
+        <a href="https://app.netlify.com/teams/lochmann20/overview"><p>Netlify</p></a>
+    </div>
+    <div class="unreal">
+        <div class="photos"><img src="/unreal4.png" alt=""></div>
+        <div class="photos"><img src="/unreal6.png" alt=""></div>
+        <div class="photos"><img src="/unreal1.png" alt=""></div>
+        <div class="photos"><img src="/unreal7.png" alt=""></div>
+        <div class="photos"><img src="/unreal3.png" alt=""></div>
+        <div class="photos"><img src="/unreal8.png" alt=""></div>
+    </div>
     <div>
         <button><a href="mailto:linemoller1907@gmail.com">Contact - Gmail</a></button>
         <button><a href="/CV.pdf" download>Download CV</a></button>
     </div>
-
-<br>
-
-        <div class="SoMe">
-            <!-- <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Flinelochmannmoller%3Figsh%3DZWVvamxhdmF0dnBt%26fbclid%3DIwAR3164U7-SqZRhfNNSKkP-vz0WavOsnbrxLMqfdYDFDAlIvRMgKsanz11Jc&h=AT1RVhdCFEDJPajxeChrGXGyH5SIVnsw9WWTuio751tncXBjl2UhTx80_OPhiQyVqG6LG6MI0QqjSOQCyRAajAMqXNIqHApQF-evq69ICiVmkMldEwSsH17yKmrjUG5gESs">
-                <p>Instagram</p></a> -->
-            <a href="https://www.linkedin.com/in/line-m%C3%B8ller-a5311a257/"><p>LinkedIn</p></a>
-            <a href="https://app.netlify.com/teams/lochmann20/overview"><p>Netlify</p></a>
-        </div>
 </article>
 
 
@@ -30,18 +33,14 @@ import "../stars.css";
     article{
         color: white;
         text-align: center;
-        margin-bottom: 5em;
-        padding: 8em 0em;
+        padding-bottom: 15em;
 
-        & img{
-            width: 85%;
-            padding: 15px;
-        }
 
         & button{
             background-color: transparent;
-            padding: 15px;
-            border-radius: 25px;
+            padding: 3px 10px;
+            border-radius: 24px;
+            margin-top: 1em;
         }
 
         & button:hover{
@@ -67,13 +66,14 @@ import "../stars.css";
     a{
         text-decoration: none;
         color: white;
-        font-size: larger;
+        font-size: 12px;
     }
 
     .SoMe{
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
+        padding: 10px;
     }
     .SoMe a:hover{
         background-color: rgba(255, 255, 255, 0.262);
@@ -83,15 +83,53 @@ import "../stars.css";
         border-style: solid;
         border-width: thin;
         border-color: white;
-        padding: 20px;
+        padding: 10px;
         font-size: small;
     }
 
     p{
         margin: auto;
     }
-    @media screen and (min-width: 599px){
 
+    .photos:nth-child(1),
+    .photos:nth-child(2),
+    .photos:nth-child(3),
+    /* .photos:nth-child(4), */
+    .photos:nth-child(5),
+    .photos:nth-child(6){
+        display: none;
+    }
+
+    img{
+        width: 80%;
+    }
+    @media screen and (min-width: 599px){
+    article{
+        margin-bottom: 0em;
+        padding-bottom: 2em;
+        padding-top: 4em;
+
+
+        & button{
+        padding: 10px 20px;
+        background: transparent;
+        border-radius: 25px;
+        border-color: rgb(66, 66, 66);
+        border-style: solid;
+        border-width: medium;
+        & a{
+            font-size: medium;
+        }
+    }
+    }
+
+    
+
+    .unreal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     #LetsTalk{
         h1{
         font-size: 50px;
@@ -106,46 +144,50 @@ import "../stars.css";
         border-style: solid;
         border-width: thin;
         border-color: white;
-        padding: 20px;
+        padding: 3px ;
     }
 
-    .SoMe{
-        margin-bottom: 2em;
-    }
-
-    button{
-        padding: 10px 20px;
-        background: transparent;
-        margin-top: 2em;
-        margin-bottom: 2em;
-        border-radius: 25px;
-
-        & a{
-            font-size: large;
-        }
-    }
     p{
         font-size: 20px;
         padding: 20px 20px;
         text-align: center;
     }
 
+    
+
+    .unreal{
+        flex-basis: 50%;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+        margin: auto;
+        padding: 1em 0em;
+    }
+
+    .photos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .photos:nth-child(1),
+    .photos:nth-child(2),
+    .photos:nth-child(3),
+    .photos:nth-child(4),
+    .photos:nth-child(5),
+    .photos:nth-child(6){
+        display: block;
+    }
+
+    img{
+        width: 100%;
+        align-self: flex-start;
+    }
    
     
 
 }
 
-
-@media screen and (min-width: 999px){
-
-    #LetsTalk{
-       padding: 6em 0px;
-    }
-    #LetsTalk img{
-        width: 50%;
-    }
-    
-}
 </style>
 
 
