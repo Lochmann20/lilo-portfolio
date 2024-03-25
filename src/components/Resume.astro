@@ -10,21 +10,21 @@
 
     <div>
         <div class="hidden" id="boxes">
-            <img src="/png/vsc.png" alt="">
-            <h2>Visuel Studio Code</h2>
+            <h2>FrontEnd</h2>
             <p>HTML, CSS, Javascript, NEXT.js</p>
         </div>
-
         <div class="hidden" id="boxes">
-            <img src="/png/blender.png" alt="">
             <h2>Animation</h2>
             <p>3D Blender, Zbrush & Clip Studio Paint</p>
         </div>
 
         <div class="hidden" id="boxes">
-            <img src="/png/photoshop.png" alt="">
             <h2>UI / UX</h2>
             <p>Photoshop, Illustrator, Indesign</p>
+        </div>
+        <div class="hidden" id="boxes">
+            <h2>Build, deployment and hosting platforms</h2>
+            <p>Github / Netlify</p>
         </div>
     </div>
 </article>
@@ -64,19 +64,19 @@ img{
 #boxes{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 30px 36px;
+    padding: 15px 15px;
     background-color: black;
     border-radius: 15px;
     border-color: white;
     border-style: solid;
     border-width: thin;
-}
+    width: 55%;
+    }
 
-#boxes:hover{
+/* #boxes:hover{
     background-color: rgb(79, 79, 79);
     transition-delay: 0ms;
-}
+} */
 
 
 div{
@@ -86,7 +86,8 @@ div{
 }
 
 h2{
-    font-size: large;
+    font-size: x-large;
+    color: rgb(182 115 255);
 }
 
 h3{
@@ -98,7 +99,8 @@ h3{
 }
 
 p{
-    font-size: small;
+    font-size: medium;
+    margin-top: -1em;
 }
 
 h1{
@@ -119,6 +121,7 @@ h1{
     div{
         display: flex;
         gap: 0.5em;
+        height: 15vh;
     }
 
     .hidden:nth-child(2){
@@ -136,13 +139,15 @@ h1{
         margin-bottom: 2em;
         text-align: center;
     }
+
+
 }
 
 
  @media screen and (min-width: 999px){
     article{
         color: white;
-        padding: 8em 10em;
+        padding: 8em 11em;
 
         & h1{
             margin-top: 0;
@@ -150,23 +155,17 @@ h1{
     }
 
     div {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         margin: auto;
-        gap: 2em;
+        gap: 1em;
     }
 
     #boxes{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 62px 76px;
+        padding: 1em 2em;
+        justify-content: space-evenly;
     }
-
-    /* #boxesColor{
-        background-color: transparent;
-        padding: 62px 103px;
-    }    */
 
     img{
         width: 30%;
@@ -177,8 +176,18 @@ h1{
         font-size: 50px;
     }
 
+    h2{
+        margin-top: 0px;
+        font-size: x-large;
+    }
+
+    h3{
+        width: 83%;
+    }
+
     p{
-        line-height: 15px;
+        font-size: large;
+        margin-top: 0;
     }
     }
     
